@@ -405,6 +405,15 @@ namespace CameraControl
                     });
                 }
             }
+
+            Dispatcher.BeginInvoke(
+                new Action(
+                    delegate
+                    {
+                        Thread.Sleep(1500);
+                        ServiceProvider.WindowsManager.ExecuteCommand(WindowsCmdConsts.Zoom_Image_Fit);
+                    }));
+
         }
 
         private void DeviceManager_CameraSelected(ICameraDevice oldcameraDevice, ICameraDevice newcameraDevice)
@@ -445,7 +454,7 @@ namespace CameraControl
                 return;
             try
             {
-                Log.Debug("Photo transfer begin.");
+                Log.Debug(TranslationStrings.MsgPhotoTransferBegin);
                 eventArgs.CameraDevice.IsBusy = true;
                 var extension = Path.GetExtension(eventArgs.FileName);
 
@@ -476,6 +485,7 @@ namespace CameraControl
                     {
                         eventArgs.CameraDevice.IsBusy = false;
                         eventArgs.CameraDevice.ReleaseResurce(eventArgs.Handle);
+                        StaticHelper.Instance.SystemMessage = "File transfer disabled";
                         return;
                     }
                     if (extension != null && (session.DownloadOnlyJpg && extension.ToLower() != ".jpg"))
@@ -1086,6 +1096,27 @@ namespace CameraControl
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             ServiceProvider.WindowsManager.ExecuteCommand(WindowsCmdConsts.RefreshDisplay);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            EditSession();
+        }
+
+        private void EditSession()
+        {
+            try
+            {
+                EditSession editSession = new EditSession(ServiceProvider.Settings.DefaultSession);
+                editSession.Owner = ServiceProvider.PluginManager.SelectedWindow as Window;
+                editSession.ShowDialog();
+                ServiceProvider.Settings.Save(ServiceProvider.Settings.DefaultSession);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error refresh session ", ex);
+                ServiceProvider.WindowsManager.ExecuteCommand(WindowsCmdConsts.MainWnd_Message, ex.Message);
+            }
         }
 
     }

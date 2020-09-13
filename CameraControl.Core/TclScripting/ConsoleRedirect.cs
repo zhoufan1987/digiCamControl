@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using AForge.Math.Geometry;
 
 namespace CameraControl.Core.TclScripting
 {
@@ -13,6 +9,17 @@ namespace CameraControl.Core.TclScripting
     {
         private string _line = "";
         public event OutputEventHandler Output;
+
+        public ConsoleRedirect()
+            : this(null)
+        {
+            // do nothing.
+        }
+
+        public ConsoleRedirect(OutputEventHandler output)
+        {
+            this.Output = output;
+        }
 
         public override void Write(char value)
         {

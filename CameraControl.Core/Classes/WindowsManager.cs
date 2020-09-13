@@ -37,6 +37,7 @@ using System.Windows.Input;
 using CameraControl.Core.Interfaces;
 using CameraControl.Devices;
 using CameraControl.Devices.Classes;
+using MaterialDesignThemes.Wpf;
 
 #endregion
 
@@ -89,18 +90,8 @@ namespace CameraControl.Core.Classes
 
         public void ApplyTheme()
         {
-            foreach (IWindow window in WindowsList)
-            {
-                Window win = window as Window;
-                if (win != null)
-                {
-                    ServiceProvider.Settings.ApplyTheme(win);
-                }
-            }
-            foreach (Window window in Application.Current.Windows)
-            {
-                ServiceProvider.Settings.ApplyTheme(window);
-            }
+            new PaletteHelper().ReplacePrimaryColor(ServiceProvider.Settings.CurrentThemeNameNew.Split('\\')[1]);
+            new PaletteHelper().SetLightDark(ServiceProvider.Settings.CurrentThemeNameNew.StartsWith("Dark"));
         }
 
         public void ApplyKeyHanding()
@@ -158,6 +149,12 @@ namespace CameraControl.Core.Classes
                     case WindowsCmdConsts.SelectAll_Image:
                         item.SetKey(Key.A);
                         item.Ctrl = true;
+                        break;
+                    case CmdConsts.NextSeries:
+                        item.SetKey(Key.Add);
+                        break;
+                    case CmdConsts.PrevSeries:
+                        item.SetKey(Key.Subtract);
                         break;
                 }
             }

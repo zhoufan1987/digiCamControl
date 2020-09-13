@@ -2641,11 +2641,20 @@ _ReSharper.CameraControl.ServerTest
 /packages/DropNet.1.10.23.0/DropNet.1.10.23.0.nupkg
 /packages/DropNet.1.10.23.0/lib/net40/DropNet.dll
 /packages/DropNet.1.10.23.0/lib/windowsphone8/DropNet.WindowsPhone.dll
-/packages/Eagle.1.0.6018.45959/Eagle.1.0.6018.45959.nupkg
-/packages/Eagle.1.0.6018.45959/build/Eagle.targets
-/packages/Eagle.1.0.6018.45959/build/x64/Spilornis.dll
-/packages/Eagle.1.0.6018.45959/build/x86/Spilornis.dll
-/packages/Eagle.1.0.6018.45959/lib/Eagle.dll
+/packages/Eagle.1.0.6848.11041/.signature.p7s
+/packages/Eagle.1.0.6848.11041/Eagle.1.0.6848.11041.nupkg
+/packages/Eagle.CLRv4.1.0.6848.11041/.signature.p7s
+/packages/Eagle.CLRv4.1.0.6848.11041/build
+/packages/Eagle.CLRv4.1.0.6848.11041/Eagle.CLRv4.1.0.6848.11041.nupkg
+/packages/Eagle.CLRv4.1.0.6848.11041/lib
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40/Eagle.targets
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40/x64
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40/x86
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40/x64/Spilornis.dll
+/packages/Eagle.CLRv4.1.0.6848.11041/build/net40/x86/Spilornis.dll
+/packages/Eagle.CLRv4.1.0.6848.11041/lib/net40
+/packages/Eagle.CLRv4.1.0.6848.11041/lib/net40/Eagle.dll
 /packages/Facebook.7.0.10-beta/Facebook.7.0.10-beta.nupkg
 /packages/Facebook.7.0.10-beta/LICENSE.txt
 /packages/Facebook.7.0.10-beta/lib/net35-client/Facebook.dll
@@ -2870,3 +2879,199 @@ _ReSharper.CameraControl.ServerTest
 /packages/Magick.NET-Q8-x86.7.1.0/runtimes/win7-x86/native/*.dll
 /packages/Dragablz.0.0.3.197
 /packages/MaterialDesignThemes.2.3.2-ci1016
+/packages/AForge.2.2.5.deleteme
+/packages/AForge.Imaging.2.2.5.deleteme
+/packages/Accord.3.8.2-alpha/Accord.3.8.2-alpha.nupkg
+/packages/Accord.3.8.2-alpha/build/Accord.dll.config
+/packages/Accord.3.8.2-alpha/build/Accord.targets
+/packages/Accord.3.8.2-alpha/lib/net35-unity full v3.5/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net35-unity full v3.5/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net35-unity web v3.5/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net35-unity web v3.5/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net35/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net35/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net40/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net40/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net45/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net45/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net46/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net46/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/net462/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/net462/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/netstandard1.4/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/netstandard1.4/Accord.xml
+/packages/Accord.3.8.2-alpha/lib/netstandard2.0/Accord.dll
+/packages/Accord.3.8.2-alpha/lib/netstandard2.0/Accord.xml
+/packages/Accord.Imaging.3.8.2-alpha/Accord.Imaging.3.8.2-alpha.nupkg
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net35/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net40/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net40/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net45/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net45/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net46/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net46/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/net462/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/net462/Accord.Imaging.xml
+/packages/Accord.Imaging.3.8.2-alpha/lib/netstandard2.0/Accord.Imaging.dll
+/packages/Accord.Imaging.3.8.2-alpha/lib/netstandard2.0/Accord.Imaging.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/Accord.MachineLearning.3.8.2-alpha.nupkg
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity full v3.5/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity full v3.5/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity web v3.5/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35-unity web v3.5/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net35/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net40/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net40/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net45/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net45/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net46/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net46/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net462/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/net462/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/netstandard1.4/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/netstandard1.4/Accord.MachineLearning.xml
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/netstandard2.0/Accord.MachineLearning.dll
+/packages/Accord.MachineLearning.3.8.2-alpha/lib/netstandard2.0/Accord.MachineLearning.xml
+/packages/Accord.Math.3.8.2-alpha/Accord.Math.3.8.2-alpha.nupkg
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net35/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net35/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net40/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net40/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net40/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net40/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net45/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net45/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net45/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net45/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net46/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net46/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net46/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net46/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net462/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net462/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/net462/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/net462/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard1.4/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard1.4/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard1.4/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard1.4/Accord.Math.xml
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard2.0/Accord.Math.Core.dll
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard2.0/Accord.Math.Core.xml
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard2.0/Accord.Math.dll
+/packages/Accord.Math.3.8.2-alpha/lib/netstandard2.0/Accord.Math.xml
+/packages/Accord.Statistics.3.8.2-alpha/Accord.Statistics.3.8.2-alpha.nupkg
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net35/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net40/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net40/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net45/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net45/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net46/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net46/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/net462/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/net462/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/netstandard1.4/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/netstandard1.4/Accord.Statistics.xml
+/packages/Accord.Statistics.3.8.2-alpha/lib/netstandard2.0/Accord.Statistics.dll
+/packages/Accord.Statistics.3.8.2-alpha/lib/netstandard2.0/Accord.Statistics.xml
+/packages/Accord.Video.3.8.2-alpha/Accord.Video.3.8.2-alpha.nupkg
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net35/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net35/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net40/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net40/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net45/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net45/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net46/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net46/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/net462/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/net462/Accord.Video.xml
+/packages/Accord.Video.3.8.2-alpha/lib/netstandard2.0/Accord.Video.dll
+/packages/Accord.Video.3.8.2-alpha/lib/netstandard2.0/Accord.Video.xml
+/packages/Accord.Vision.3.8.2-alpha/Accord.Vision.3.8.2-alpha.nupkg
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity full v3.5/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity micro v3.5/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity subset v3.5/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net35-unity web v3.5/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net35/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net35/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net40/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net40/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net45/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net45/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net46/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net46/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/net462/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/net462/Accord.Vision.xml
+/packages/Accord.Vision.3.8.2-alpha/lib/netstandard2.0/Accord.Vision.dll
+/packages/Accord.Vision.3.8.2-alpha/lib/netstandard2.0/Accord.Vision.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/Accord.Video.DirectShow.3.8.2-alpha.nupkg
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net35/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net35/Accord.Video.DirectShow.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net40/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net40/Accord.Video.DirectShow.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net45/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net45/Accord.Video.DirectShow.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net46/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net46/Accord.Video.DirectShow.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net462/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/net462/Accord.Video.DirectShow.xml
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/netstandard2.0/Accord.Video.DirectShow.dll
+/packages/Accord.Video.DirectShow.3.8.2-alpha/lib/netstandard2.0/Accord.Video.DirectShow.xml
+/packages/*
+/.vs/*

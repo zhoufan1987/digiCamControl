@@ -188,7 +188,7 @@ namespace CameraControl.Core.Translation
         public static string LabelImageAlignmentRightBottom = "Right/Bottom";
         public static string LabelVideoCodecProblem = "Video codec problem";
 
-        public static string MsgPhotoTransferBegin = "Photo transfer begins";
+        public static string MsgPhotoTransferBegin = "Transferring captured image...";
         public static string MsgPhotoTransferDone = "Photo transfer done";
         public static string MsgPhotoTransferError = "Transfer error !\nMessage {0}";
         public static string MsgBulbModeNotSupported = "Bulb mode not supported !";
@@ -704,5 +704,17 @@ namespace CameraControl.Core.Translation
         public static string LabelWaitForFocus = "Wait for Focus (msec)";
         public static string LabelGridColor = "Grid Color";
         public static string LabelWebserverPort = "Webserver Port";
+        public static string LabelWebcameraSupport = "Webcamera Support";
+        public static string LabelContrast = "Contrast";
+
+        public static string LabelZoom = "Zoom";
+        public static string LabelDefaultSession = "Default Session";
+        public static string LabelDefaultPreset = "Default Preset";
+        public static string LabelWiaDeviceSupport = "Wia device support";
+        public static string LabelWiFiProvider = "WiFi Provider";
+        public static string LabelIpAddreess = "Ip Address";
+
+        // 04/11/2018
+        public static string LabelShowFocusControlBar = "Show Focus Control Bar";
     }
 }

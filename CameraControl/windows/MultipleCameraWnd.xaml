@@ -7,18 +7,10 @@
                       xmlns:local="clr-namespace:CameraControl.Controls"
                       xmlns:T="clr-namespace:CameraControl.Core.Translation;assembly=CameraControl.Core"
                       xmlns:dragDrop="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                       WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ShowMinButton="False" PreviewKeyDown="MetroWindow_PreviewKeyDown" >
     <Window.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />-->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatButton.xaml" />
-            </ResourceDictionary.MergedDictionaries>
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter1" />
         </ResourceDictionary>
     </Window.Resources>
@@ -69,10 +61,10 @@
                 <Controls:NumericUpDown Grid.Column="1" Grid.Row="5"  Name="int_wait" Minimum="0" Maximum="10000"  Value="{Binding Path=DelaySec, RelativeSource={RelativeSource FindAncestor, AncestorType=my1:MultipleCameraWnd, AncestorLevel=1}}" ToolTip="Wait beetven cameras shots in seconds " Margin="1"/>
 
                 <Label  Grid.Row="6" Grid.Column="0" Content="{T:TranslateExtension LabelNumberOfCaptures}" Margin="3" />
-                <Controls:NumericUpDown  Grid.Row="6" Value="{Binding Path=NumOfPhotos, RelativeSource={RelativeSource FindAncestor, AncestorType=my1:MultipleCameraWnd, AncestorLevel=1}}" Maximum="1000" Minimum="1" Margin="1" Grid.Column="1" />
+                <Controls:NumericUpDown  Grid.Row="6" Value="{Binding Path=NumOfPhotos, RelativeSource={RelativeSource FindAncestor, AncestorType=my1:MultipleCameraWnd, AncestorLevel=1}}" Maximum="1000" Minimum="1" Margin="5" Grid.Column="1" />
 
                 <Label  Grid.Row="7" Grid.Column="0" Content="{T:TranslateExtension LabelWaitTime}" Margin="3" />
-                <Controls:NumericUpDown Grid.Row="7" Grid.Column="1" Value="{Binding Path=WaitSec, RelativeSource={RelativeSource FindAncestor, AncestorType=my1:MultipleCameraWnd, AncestorLevel=1}}" Margin="1" Maximum="3600" Minimum="1"/>
+                <Controls:NumericUpDown Grid.Row="7" Grid.Column="1" Value="{Binding Path=WaitSec, RelativeSource={RelativeSource FindAncestor, AncestorType=my1:MultipleCameraWnd, AncestorLevel=1}}" Margin="5" Maximum="3600" Minimum="0"/>
 
                 <Button Content="{T:Translate LabelSettingsLiveView}" Grid.Row="8" Name="btn_liveview" Margin="2" Click="btn_liveview_Click" Grid.ColumnSpan="2" />
                 <Button Content="{T:Translate LabelSaveOrder}" Grid.Row="9" Name="btn_saveOrder" Margin="2" Click="btn_saveOrder_Click" Grid.ColumnSpan="2" />
@@ -86,28 +78,29 @@
         <!--<Label Content="{T:TranslateExtension LabelConnectedCameras}" Grid.Column="1" Padding="0" Margin="0,0,0,334" />-->
         <TabControl Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
             <TabItem Header="{T:TranslateExtension LabelGrid}">
-                <ListBox  Name="listBox1" ItemsSource="{Binding Source={x:Static Member=Core:ServiceProvider.DeviceManager}, Path=ConnectedDevices}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding Source={x:Static Member=Core:ServiceProvider.DeviceManager}, Path=SelectedCameraDevice}" Margin="0,20,0,0"
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,20,0,0" HorizontalScrollBarVisibility="Disabled"  >
+                    <ItemsControl  Name="listBox1" ItemsSource="{Binding Source={x:Static Member=Core:ServiceProvider.DeviceManager}, Path=ConnectedDevices}" 
                   dragDrop:DragDrop.IsDragSource="True" dragDrop:DragDrop.IsDropTarget="True" >
-                    <ListBox.ContextMenu>
-                        <ContextMenu>
-                            <MenuItem Header="{T:TranslateExtension MenuProperties}" Click="MenuItem_Click" />
-                            <MenuItem Header="{T:TranslateExtension MenuUseSelectedCameraPreset}" Click="MenuItem_Click_1" />
-                        </ContextMenu>
-                    </ListBox.ContextMenu>
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel/>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                    <ListBox.ItemTemplate>
-                        <HierarchicalDataTemplate>
-                            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
-
-                                <local:ControlerSimple DataContext="{Binding Path=.}" Width="120" Height="430"/>
-                            </StackPanel>
-                        </HierarchicalDataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                        <ItemsControl.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="{T:TranslateExtension MenuProperties}" Click="MenuItem_Click" />
+                                <MenuItem Header="{T:TranslateExtension MenuUseSelectedCameraPreset}" Click="MenuItem_Click_1" />
+                            </ContextMenu>
+                        </ItemsControl.ContextMenu>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <HierarchicalDataTemplate>
+                                <materialDesign:Card  VerticalAlignment="Top" Margin="2">
+                                    <local:ControlerSimple DataContext="{Binding Path=.}" Width="130" Height="410" />
+                                </materialDesign:Card>
+                            </HierarchicalDataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="{T:TranslateExtension LabelList}">
                 <DataGrid ItemsSource="{Binding Source={x:Static Member=Core:ServiceProvider.DeviceManager}, Path=ConnectedDevices}" AutoGenerateColumns="False" IsSynchronizedWithCurrentItem="True">
@@ -120,8 +113,8 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        
-                        
+
+
                         <DataGridTextColumn Binding="{Binding Path=DisplayName}" Header="{T:TranslateExtension LabelCameraname}" IsReadOnly="True" />
                         <DataGridTextColumn Binding="{Binding Path=SerialNumber}" Header="{T:TranslateExtension LabelSerialNumber}" IsReadOnly="True" />
                         <DataGridTextColumn Binding="{Binding Path=Battery}" Header="{T:TranslateExtension Battery}" IsReadOnly="True" />
@@ -171,7 +164,7 @@
                                 <DataTemplate>
                                     <Border BorderThickness="1" BorderBrush="{Binding Path=WhiteBalance.ErrorColor}" >
                                         <ComboBox IsEnabled="{Binding Path=WhiteBalance.IsEnabled}" ItemsSource="{Binding Path=WhiteBalance.Values}" SelectedValue="{Binding Path=WhiteBalance.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged  }" />
-                                    </Border> 
+                                    </Border>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows;
-using CameraControl.Classes;
 using CameraControl.Core;
 using CameraControl.Core.Classes;
 using CameraControl.Core.Interfaces;
@@ -50,8 +49,6 @@ namespace CameraControl.ViewModel
         public RelayCommand UseAsMasterCommand { get; private set; }
         
         public RelayCommand FlipPreviewCommand { get; set; }
-        public RelayCommand EnhancedThumbsCommand { get; set; }
-        public RelayCommand ShowThumbInfoCommand { get; set; }
         
         public RelayCommand ManualPageCommand { get; set; }
         public RelayCommand HomePageCommand { get; set; }
@@ -173,6 +170,9 @@ namespace CameraControl.ViewModel
 
         public MainMenuViewModel()
         {
+            if (IsInDesignMode)  
+                return;
+
             SendCommand = new GalaSoft.MvvmLight.Command.RelayCommand<string>(Send);
             SettingsCommand = new RelayCommand(EditSettings);
             ThumbSizeCommand = new GalaSoft.MvvmLight.Command.RelayCommand<string>(ThumbSize);
@@ -215,9 +215,6 @@ namespace CameraControl.ViewModel
 
             ToggleFocusCommand = new RelayCommand(() => ShowFocusPoints = !ShowFocusPoints);
             FlipPreviewCommand = new RelayCommand(() => FlipPreview = !FlipPreview);
-            EnhancedThumbsCommand = new RelayCommand(() => EnhancedThumbs = !EnhancedThumbs);
-            ShowThumbInfoCommand = new RelayCommand(() => ShowThumbInfo = !ShowThumbInfo);
-
             HomePageCommand =
                 new RelayCommand(
                     () => PhotoUtils.Run(string.IsNullOrEmpty(Branding.HomePageUrl)

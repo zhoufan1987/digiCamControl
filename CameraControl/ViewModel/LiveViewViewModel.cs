@@ -8,10 +8,10 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using AForge;
-using AForge.Imaging;
-using AForge.Imaging.Filters;
-using AForge.Vision.Motion;
+using Accord;
+using Accord.Imaging;
+using Accord.Imaging.Filters;
+using Accord.Vision.Motion;
 using CameraControl.Classes;
 using CameraControl.Core;
 using CameraControl.Core.Classes;
@@ -23,6 +23,9 @@ using CameraControl.Devices.Others;
 using CameraControl.windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using LibMJPEGServer;
+using LibMJPEGServer.QualityManagement;
+using LibMJPEGServer.Sources;
 using Microsoft.Win32;
 using WebEye;
 using Color = System.Drawing.Color;
@@ -35,6 +38,9 @@ namespace CameraControl.ViewModel
     {
         public static event EventHandler FocuseDone;
         private LiveViewFullScreenWnd FullScreenWnd;
+
+        private LiveViewVideoSource _liveViewVideoSource = null;
+        private MJpegServer server = null;
 
         private const int DesiredFrameRate = 20;
         private StreamPlayerControl _videoSource = new StreamPlayerControl();
@@ -140,6 +146,7 @@ namespace CameraControl.ViewModel
             {
                 _cameraDevice = value;
                 RaisePropertyChanged(() => CameraDevice);
+                RaisePropertyChanged(() => ZoomSupported);
             }
         }
 
@@ -1277,6 +1284,9 @@ namespace CameraControl.ViewModel
 
         public bool IsActive { get; set; }
 
+        public bool ZoomSupported => CameraDevice.GetCapability(CapabilityEnum.Zoom);
+
+
         public LiveViewViewModel()
         {
             CameraProperty = new CameraProperty();
@@ -1934,8 +1944,8 @@ namespace CameraControl.ViewModel
 
         public virtual void GetLiveImageStream()
         {
-            Application.Current.Dispatcher.BeginInvoke(new Action(() =>
-            {
+            //Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+            //{
                 try
                 {
                     if (!_videoSource.IsPlaying)
@@ -1950,7 +1960,7 @@ namespace CameraControl.ViewModel
                 {
 
                 }
-            }));
+            //}));
         }
 
         public virtual void GetLiveImageData()
@@ -1991,6 +2001,11 @@ namespace CameraControl.ViewModel
                 return;
             }
 
+            if (LiveViewData.ImageData.Length < 50)
+            {
+                return;
+            }
+
             Recording = LiveViewData.MovieIsRecording;
             try
             {
@@ -2011,6 +2026,7 @@ namespace CameraControl.ViewModel
                     HaveSoundData = LiveViewData.HaveSoundData;
                     MovieTimeRemain = decimal.Round(LiveViewData.MovieTimeRemain, 2);
 
+
                     if (Recording && _recordLength > 0 && (DateTime.Now - _recordStartTime).TotalSeconds > _recordLength)
                     {
                         StopRecordMovie();
@@ -2028,6 +2044,7 @@ namespace CameraControl.ViewModel
                             bi.Freeze();
                             Bitmap = bi;
                         }
+                        _liveViewVideoSource?.OnImageGrabbed(new Bitmap(stream));
                         ServiceProvider.DeviceManager.LiveViewImage[CameraDevice] = stream.ToArray();
                         _operInProgress = false;
                         return;
@@ -2054,6 +2071,8 @@ namespace CameraControl.ViewModel
 
         public void ProcessLiveView(Bitmap bmp)
         {
+            _liveViewVideoSource?.OnImageGrabbed(new Bitmap(bmp));
+
             if (PreviewTime > 0 && (DateTime.Now - _photoCapturedTime).TotalSeconds <= PreviewTime)
             {
                 var bitmap = ServiceProvider.Settings.SelectedBitmap.DisplayImage.Clone();
@@ -2550,6 +2569,8 @@ namespace CameraControl.ViewModel
                     Thread thread = new Thread(StartLiveViewThread);
                     thread.Start();
                     thread.Join();
+                    if (ServiceProvider.Settings.UseWebserver)
+                        Task.Factory.StartNew(StartStreamServer);
                 }
                 else
                 {
@@ -2570,6 +2591,25 @@ namespace CameraControl.ViewModel
                     TranslationStrings.LabelLiveViewError + "\n" +
                     ex.Message);
                 _timer.Stop();
+            }
+        }
+
+        private void StartStreamServer()
+        {
+            try
+            {
+
+                _liveViewVideoSource = new LiveViewVideoSource(this);
+
+                 server = new MJpegServer(ServiceProvider.Settings.WebserverPort + 1, _liveViewVideoSource,
+                    new StaticQualityDefinition(60));
+
+                server.Start();
+                Console.WriteLine($"Server started: {server.ServerAddress}");
+            }
+            catch (Exception e)
+            {
+                Log.Error("Stream Server error",e);
             }
         }
 
@@ -2686,6 +2726,7 @@ namespace CameraControl.ViewModel
                         _videoSource.Stop();
                     }
                 }));
+                server?.Stop();
             }
             catch (Exception exception)
             {
